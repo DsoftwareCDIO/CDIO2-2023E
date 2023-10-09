@@ -3,25 +3,25 @@ package game.main;
 public class Player {
 
     private String name;
-   // private Account account;
+    private Account account;
 
 
     //Constructor, makes a player with (name)
     public Player(String name) {
         this.name = name;
+        account = new Account();
     }
 
     public int getCoins() {
-        // return account.getCoins()
-        return 0;
+        return account.getCoins();
     }
 
     public String getName() {
         return name;
     }
 
-    public void changeCoins(int c) {
-      //  account.changeCoins()
+    public void changeCoins(int coins) {
+        account.changeCoins(coins);
     }
 
 }
