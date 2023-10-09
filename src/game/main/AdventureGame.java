@@ -10,7 +10,7 @@ public class AdventureGame {
         
         Player currentPlayer = p1;
         int turn = 1;
-        do {
+        while (!hasWon(currentPlayer)) {
             // Set currentplayer depending on turn
             currentPlayer = turn % 2 == 0 ? p2 : p1;
             System.out.println("\n" + "Round: " + (turn + 1) / 2);
@@ -55,9 +55,14 @@ public class AdventureGame {
                     break;
             }
             turn++;
-        } while (/*!winCheck(currentPlayer, d1, d2)*/false);
+        }
         System.out.println("\nCongratulations " + currentPlayer.getName() + ", you won the game!");
         scanner.nextLine();
         scanner.close();
+    }
+
+    // Checks whether the current player has won
+    private static boolean hasWon(Player p){
+        return p.getCoins() >= 3000;
     }
 }
