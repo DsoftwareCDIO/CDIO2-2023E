@@ -22,5 +22,8 @@ public class AdventureGame {
             
             turn++;
         } while (/*!winCheck(currentPlayer, d1, d2)*/true);
+        //System.out.println("\nCongratulations " + currentPlayer.getName() + ", you won the game!");
+        scanner.nextLine();
+        scanner.close();
     }
 }
