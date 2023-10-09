@@ -16,12 +16,46 @@ public class AdventureGame {
             System.out.println("\n" + "Round: " + (turn + 1) / 2);
             System.out.print(currentPlayer.getName() + "'s turn, press ENTER to roll the dice");
             scanner.nextLine();
-
-            //d1.roll();
-            //d2.roll();
             
+            switch (/*getFaceValue()*/1){
+                case 1 : 
+                    break;
+                case 2 : 
+                    currentPlayer.changeCoins(250);
+                    break;
+                case 3 : 
+                    currentPlayer.changeCoins(-100);
+                    break;
+                case 4 : 
+                    currentPlayer.changeCoins(100);
+                    break;
+                case 5 : 
+                    currentPlayer.changeCoins(-20);
+                    break;
+                case 6 : 
+                    currentPlayer.changeCoins(180);
+                    break;
+                case 7 : 
+                    break;
+                case 8 : 
+                    currentPlayer.changeCoins(-70);
+                    break;
+                case 9 : 
+                    currentPlayer.changeCoins(60);
+                    break;
+                case 10 : 
+                    currentPlayer.changeCoins(-80);
+                    turn--;
+                    break;
+                case 11 : 
+                    currentPlayer.changeCoins(-50);
+                    break;
+                case 12 : 
+                    currentPlayer.changeCoins(650);
+                    break;
+            }
             turn++;
-        } while (/*!winCheck(currentPlayer, d1, d2)*/true);
+        } while (/*!winCheck(currentPlayer, d1, d2)*/false);
         System.out.println("\nCongratulations " + currentPlayer.getName() + ", you won the game!");
         scanner.nextLine();
         scanner.close();
