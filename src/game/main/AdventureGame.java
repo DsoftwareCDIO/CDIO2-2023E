@@ -53,6 +53,8 @@ public class AdventureGame {
                 case 12 : 
                     currentPlayer.changeCoins(650);
                     break;
+                default:
+                    break;
             }
             turn++;
         }
