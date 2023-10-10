@@ -10,6 +10,8 @@ public class AdventureGame {
         
         Player currentPlayer = p1;
         int turn = 1;
+
+        // Game loop that runs, until a player has won
         while (!hasWon(currentPlayer)) {
             // Set currentplayer depending on turn
             currentPlayer = turn % 2 == 0 ? p2 : p1;
@@ -17,6 +19,7 @@ public class AdventureGame {
             System.out.print(currentPlayer.getName() + "'s turn, press ENTER to roll the dice");
             scanner.nextLine();
             
+            // Actions happens based on the players dicethrow
             switch (/*getFaceValue()*/1){
                 case 1 : 
                     break;
@@ -58,6 +61,8 @@ public class AdventureGame {
             }
             turn++;
         }
+
+        // Game loop is stopped and winner is announced
         System.out.println("\nCongratulations " + currentPlayer.getName() + ", you won the game!");
         scanner.nextLine();
         scanner.close();
