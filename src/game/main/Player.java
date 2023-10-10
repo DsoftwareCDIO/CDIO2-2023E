@@ -12,15 +12,15 @@ public class Player {
         account = new Account();
     }
 
-    public int getCoins() {
+    public int getCoins() {         //Method to get coins assigned to account
         return account.getCoins();
     }
 
-    public String getName() {
+    public String getName() {       //Method to get name of player
         return name;
     }
 
-    public void changeCoins(int coins) {
+    public void changeCoins(int coins) {        // Method to change the amount of coins in the account
         account.changeCoins(coins);
     }
 
