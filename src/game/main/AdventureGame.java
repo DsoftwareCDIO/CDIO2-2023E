@@ -62,7 +62,7 @@ public class AdventureGame {
                     turn--;
                     break;
                 case 11 : 
-                System.out.println("You fell into my trap(card) You are forced to pay(lose) the 50 coins(lifepoints)");
+                System.out.println("You fell into my trap(card) You are forced to pay(lose) 50 coins(lifepoints)");
                     currentPlayer.changeCoins(-50);
                     break;
                 case 12 : 
