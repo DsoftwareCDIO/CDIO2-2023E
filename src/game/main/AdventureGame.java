@@ -72,6 +72,7 @@ public class AdventureGame {
                 default:
                     break;
             }
+            System.out.print(currentPlayer + " has " + currentPlayer.getCoins() + " coins");
             turn++;
         }
 
