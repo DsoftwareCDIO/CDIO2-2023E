@@ -11,5 +11,8 @@ public class Account {
 
     public void changeCoins(int coins){     //Method to change coins in Account
         this.coins += coins;
+        if (this.coins < 0) {
+            this.coins = 0;
+        }
     }
 }
