@@ -11,7 +11,15 @@ public class AdventureGame {
         Player currentPlayer = p1;
         int turn = 1;
 
+        
+        // The game starts
+        System.out.println("-------------------------------------------------------------------------------");
         System.out.println("Hello! and welcome to you, players 1 and 2. Are you ready for an adventure?");
+        System.out.println("Rules are as followed:");
+        System.out.println("You get or lose coins depending on your dice values");
+        System.out.println("First player to get to 3000 or more coins wins!");
+        System.out.println("Have fun and let the game begin");
+        System.out.println("-------------------------------------------------------------------------------");
 
         // Game loop that runs, until a player has won
         while (!hasWon(currentPlayer)) {
