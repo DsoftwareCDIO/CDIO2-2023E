@@ -1,7 +1,7 @@
 package game.main;
 //I'm rich, therfore im happy
 public class Account {
-    private int coins = 0;
+    private int coins = 1000;
 
     public Account(){};     //Creates the account object
 
