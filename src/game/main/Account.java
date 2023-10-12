@@ -6,6 +6,9 @@ public class Account {
     public Account(){};     //Creates the account object
 
     public int getCoins(){      //Method to get coins
+        if (this.coins < 0){
+            this.coins = 0;
+        }
         return coins;
     }
 

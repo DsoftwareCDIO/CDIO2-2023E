@@ -10,12 +10,14 @@ public class AdventureGame {
         
         Player currentPlayer = p1;
         int turn = 1;
-
+        p1.changeCoins(1000);
+        p2.changeCoins(1000);
         
         // The game starts
         System.out.println("-------------------------------------------------------------------------------");
         System.out.println("Hello! and welcome to you, players 1 and 2. Are you ready for an adventure?");
         System.out.println("Rules are as followed:");
+        System.out.println("You start with 1000 coins");
         System.out.println("You get or lose coins depending on your dice values");
         System.out.println("First player to get to 3000 or more coins wins!");
         System.out.println("Have fun and let the game begin");
@@ -30,7 +32,7 @@ public class AdventureGame {
             scanner.nextLine();
             
             // Actions happens based on the players dicethrow
-            switch (/*getFaceValue()*/1){
+            switch (/*getFaceValue()*/4){
                 case 1 : 
                     break;
                 case 2 : 
@@ -80,7 +82,7 @@ public class AdventureGame {
                 default:
                     break;
             }
-            System.out.print(currentPlayer + " has " + currentPlayer.getCoins() + " coins");
+            System.out.print(currentPlayer.getName() + " has " + currentPlayer.getCoins() + " coins");
             turn++;
         }
 
