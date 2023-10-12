@@ -10,7 +10,8 @@ public class AdventureGame {
         
         Player currentPlayer = p1;
         int turn = 1;
-
+        p1.changeCoins(1000);
+        p2.changeCoins(1000);
         
         // The game starts
         System.out.println("-------------------------------------------------------------------------------");
@@ -30,7 +31,7 @@ public class AdventureGame {
             scanner.nextLine();
             
             // Actions happens based on the players dicethrow
-            switch (/*getFaceValue()*/1){
+            switch (/*getFaceValue()*/4){
                 case 1 : 
                     break;
                 case 2 : 
