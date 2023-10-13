@@ -1,4 +1,4 @@
-package game.main;
+package main;
     // I think, therefore i am
 public class Player {
 

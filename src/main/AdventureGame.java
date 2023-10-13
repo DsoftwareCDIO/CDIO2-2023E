@@ -1,4 +1,4 @@
-package game.main;
+package main;
 import java.util.Scanner;
 public class AdventureGame {
     private static Player p1;
