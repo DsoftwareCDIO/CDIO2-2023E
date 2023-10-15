@@ -15,10 +15,10 @@ public class AdventureGame {
         
         // The game starts
         System.out.println("-------------------------------------------------------------------------------");
-        System.out.println("Hello! and welcome to you, players 1 and 2. Are you ready for an adventure?");
+        System.out.println("Hello! and welcome to you, Player 1 and Player 2. Are you ready for an adventure?\n");
         System.out.println("Rules are as followed:");
         System.out.println("You start with 1000 coins");
-        System.out.println("You get or lose coins depending on your dice values");
+        System.out.println("You obtian or lose coins depending on your dice throw");
         System.out.println("First player to get to 3000 or more coins wins!");
         System.out.println("Have fun and let the game begin");
         System.out.println("-------------------------------------------------------------------------------");
@@ -82,7 +82,9 @@ public class AdventureGame {
                 default:
                     break;
             }
-            System.out.print(currentPlayer.getName() + " has " + currentPlayer.getCoins() + " coins");
+            System.out.print("You now have " + currentPlayer.getCoins() + " coins");
+            System.out.print("Press ENTER to continue");
+            scanner.nextLine();
             turn++;
         }
 
