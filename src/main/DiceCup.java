@@ -9,6 +9,9 @@ abstract class DiceCup {
         Random random = new Random();
         // Get random num between 0 (inclusive) and 6 (exclusive), adds 1 to get range
         // for n-sided die
-        return(random.nextInt(diceSides) + 1);
+        int d1 = random.nextInt(diceSides) + 1;
+        int d2 = random.nextInt(diceSides) + 1;
+
+        return(d1+d2);
     }
 }
