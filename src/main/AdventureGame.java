@@ -1,11 +1,10 @@
 package main;
 import java.util.Scanner;
+
 public class AdventureGame {
-    private static Player p1;
-    private static Player p2;
-    public static void main(String[] args) throws Exception {
-        p1 = new Player("Player 1");
-        p2 = new Player("Player 2");
+    public static void main(String[] args) {
+        Player p1 = new Player("Player 1");
+        Player p2 = new Player("Player 2");
         Scanner scanner = new Scanner(System.in);
         
         Player currentPlayer = p1;

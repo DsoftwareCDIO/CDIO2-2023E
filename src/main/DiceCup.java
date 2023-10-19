@@ -1,9 +1,11 @@
 package main;
 import java.util.Random;
 
-
 public abstract class DiceCup {
-    private static String[] DiceVisuals = new String[] {
+    // Init random
+    static Random random = new Random();
+    
+    private static String[] diceVisuals = new String[] {
         "+-------+\n|       |\n|   o   |\n|       |\n+-------+",
         "+-------+\n| o     |\n|       |\n|     o |\n+-------+",
         "+-------+\n| o     |\n|   o   |\n|     o |\n+-------+",
@@ -13,8 +15,6 @@ public abstract class DiceCup {
     };
 
     public static int rollDice(int diceSides){
-        // Init random
-        Random random = new Random();
         // Get random num between 0 (inclusive) and 6 (exclusive), adds 1 to get range
         // for n-sided die
         int d1 = random.nextInt(diceSides) + 1;
@@ -25,9 +25,9 @@ public abstract class DiceCup {
     }
 
     private static void drawDice(int[] dice){
-        for (int i = 0; i < DiceVisuals[0].split("\n").length; i++) {
+        for (int i = 0; i < diceVisuals[0].split("\n").length; i++) {
             for (int die : dice) {
-                System.out.print(DiceVisuals[die-1].split("\n")[i] + "    ");
+                System.out.print(diceVisuals[die-1].split("\n")[i] + "    ");
             }
             System.out.print("\n");
         }
