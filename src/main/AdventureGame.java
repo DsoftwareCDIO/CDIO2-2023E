@@ -1,17 +1,14 @@
 package main;
 import java.util.Scanner;
+
 public class AdventureGame {
-    private static Player p1;
-    private static Player p2;
-    public static void main(String[] args) throws Exception {
-        p1 = new Player("Player 1");
-        p2 = new Player("Player 2");
+    public static void main(String[] args) {
+        Player p1 = new Player("Player 1");
+        Player p2 = new Player("Player 2");
         Scanner scanner = new Scanner(System.in);
         
         Player currentPlayer = p1;
         int turn = 1;
-        p1.changeCoins(1000);
-        p2.changeCoins(1000);
         
         // The game starts
         System.out.println("-------------------------------------------------------------------------------");
@@ -32,7 +29,7 @@ public class AdventureGame {
             scanner.nextLine();
             
             // Actions happens based on the players dicethrow
-            switch (/*getFaceValue()*/4){
+            switch (DiceCup.rollDice(6)){
                 case 1 : 
                     break;
                 case 2 : 
@@ -83,7 +80,7 @@ public class AdventureGame {
                     break;
             }
             System.out.print("You now have " + currentPlayer.getCoins() + " coins");
-            System.out.print("Press ENTER to continue");
+            System.out.print(" | Press ENTER to continue");
             scanner.nextLine();
             turn++;
         }

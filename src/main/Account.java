@@ -3,8 +3,6 @@ package main;
 public class Account {
     private int coins = 1000;
 
-    public Account(){};     //Creates the account object
-
     public int getCoins(){      //Method to get coins
         if (this.coins < 0){
             this.coins = 0;

@@ -5,7 +5,6 @@ public class Player {
     private String name;
     private Account account;
 
-
     //Constructor, makes a player with (name)
     public Player(String name) {
         this.name = name;
