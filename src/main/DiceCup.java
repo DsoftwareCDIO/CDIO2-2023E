@@ -2,7 +2,7 @@ package main;
 import java.util.Random;
 
 
-abstract class DiceCup {
+public abstract class DiceCup {
 
     public static int rollDice(int diceSides){
         // Init random
