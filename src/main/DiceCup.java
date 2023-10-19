@@ -27,7 +27,7 @@ public abstract class DiceCup {
     private static void drawDice(int[] dice){
         for (int i = 0; i < DiceVisuals[0].split("\n").length; i++) {
             for (int die : dice) {
-                System.out.print(DiceVisuals[die-1].split("\n")[i]);
+                System.out.print(DiceVisuals[die-1].split("\n")[i] + "    ");
             }
             System.out.print("\n");
         }
