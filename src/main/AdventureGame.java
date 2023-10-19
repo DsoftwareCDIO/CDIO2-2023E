@@ -10,8 +10,6 @@ public class AdventureGame {
         
         Player currentPlayer = p1;
         int turn = 1;
-        p1.changeCoins(1000);
-        p2.changeCoins(1000);
         
         // The game starts
         System.out.println("-------------------------------------------------------------------------------");
@@ -83,7 +81,7 @@ public class AdventureGame {
                     break;
             }
             System.out.print("You now have " + currentPlayer.getCoins() + " coins");
-            System.out.print("Press ENTER to continue");
+            System.out.print(" | Press ENTER to continue");
             scanner.nextLine();
             turn++;
         }
