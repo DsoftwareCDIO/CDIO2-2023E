@@ -3,5 +3,8 @@
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
-    ]
+    ],
+    "maven.terminal.useJavaHome": true,
+    "java.jdt.ls.java.home": "C:\\Program Files\\Java\\openlogic-openjdk-8u382-b05-windows-64"
+
 }
