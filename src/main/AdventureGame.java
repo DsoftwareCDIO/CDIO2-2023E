@@ -15,7 +15,7 @@ public class AdventureGame {
         System.out.println("Hello! and welcome to you, Player 1 and Player 2. Are you ready for an adventure?\n");
         System.out.println("Rules are as followed:");
         System.out.println("You start with 1000 coins");
-        System.out.println("You obtian or lose coins depending on your dice throw");
+        System.out.println("You obtain or lose coins depending on your dice throw");
         System.out.println("First player to get to 3000 or more coins wins!");
         System.out.println("Have fun and let the game begin");
         System.out.println("---------------------------------------------------------------------------------");
