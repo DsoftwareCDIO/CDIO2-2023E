@@ -15,7 +15,7 @@ public class TestAccount {
         p1.changeCoins(250);
         assertEquals(p1.getCoins(), 1800);
         
-        Player p2 = new Player("Test person 1");
+        Player p2 = new Player("Test person 2");
         p2.changeCoins(-1000);
         assertEquals(p2.getCoins(), 0);
         p2.changeCoins(100);

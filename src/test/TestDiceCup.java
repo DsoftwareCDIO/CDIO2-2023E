@@ -6,7 +6,6 @@ import org.junit.Test;
 import main.DiceCup;
 
 public class TestDiceCup {
-
     @Test
     public void thousandDiceRolls(){
         int sum = 0;
