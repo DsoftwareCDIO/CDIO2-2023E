@@ -4,6 +4,7 @@ import java.util.Random;
 public abstract class DiceCup {
     // Init random
     static Random random = new Random();
+    private static int diceSides = 6;
     
     private static String[] diceVisuals = new String[] {
         //templates for the dice
@@ -15,7 +16,7 @@ public abstract class DiceCup {
         "+-------+\n| o   o |\n| o   o |\n| o   o |\n+-------+",
     };
 
-    public static int rollDice(int diceSides){
+    public static int rollDice(){
         // Get random num between 0 (inclusive) and 6 (exclusive), adds 1 to get range
         // for n-sided die
         int d1 = random.nextInt(diceSides) + 1;

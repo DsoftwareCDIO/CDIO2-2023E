@@ -29,7 +29,7 @@ public class AdventureGame {
             scanner.nextLine();
             
             // Actions happens based on the players dicethrow
-            switch (DiceCup.rollDice(6)){
+            switch (DiceCup.rollDice()){
                 case 1 : 
                     break;
                 case 2 : 
