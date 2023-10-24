@@ -3,14 +3,16 @@ package main;
 public class Account {
     private int coins = 1000;
 
-    public int getCoins(){      //Method to get coins
+    //Method to get coins
+    public int getCoins(){      
         if (this.coins < 0){
             this.coins = 0;
         }
         return coins;
     }
 
-    public void changeCoins(int coins){     //Method to change coins in Account
+    //Method to change coins in Account
+    public void changeCoins(int coins){     
         this.coins += coins;
         if (this.coins < 0) {
             this.coins = 0;
