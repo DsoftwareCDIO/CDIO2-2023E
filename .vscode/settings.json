@@ -2,7 +2,9 @@
     "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "lib/**/*.jar"
+        "lib/**/*.jar",
+        "c:\\Users\\Jonat\\Downloads\\jna-platform-5.13.0.jar",
+        "c:\\Users\\Jonat\\Downloads\\jna-jpms-5.13.0.jar"
     ],
     "maven.terminal.useJavaHome": true,
     "java.jdt.ls.java.home": "C:\\Program Files\\Java\\openlogic-openjdk-8u382-b05-windows-64"
