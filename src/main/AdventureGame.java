@@ -35,7 +35,7 @@ public class AdventureGame {
         
         // The game starts
         System.out.println("---------------------------------------------------------------------------------");
-        System.out.println("Hello! and welcome to you, \u001b[31mPlayer 1\u001b[0m and \u001b[34mPlayer 2\u001b[0m. Are you ready for an adventure?\n");
+        System.out.println("Hello! and welcome to you, \u001b[31mPlayer 1\u001b[0m and \u001b[36mPlayer 2\u001b[0m. Are you ready for an adventure?\n");
         System.out.println("Rules are as followed:");
         System.out.println("\u001b[32mYou start with 1000 coins");
         System.out.println("You obtain or lose coins depending on your dice throw");
@@ -48,7 +48,7 @@ public class AdventureGame {
             // Set currentplayer depending on turn
             currentPlayer = turn % 2 == 0 ? p2 : p1;
             // Sets color in cmd of the current player
-            playerColor = turn % 2 == 0 ? "\u001b[34m" : "\u001b[31m";
+            playerColor = turn % 2 == 0 ? "\u001b[36m" : "\u001b[31m";
             System.out.println("\n" + "Round: " + (turn + 1) / 2);
             System.out.print(playerColor + currentPlayer.getName() + "'s\u001b[0m turn, press ENTER to roll the dice");
             scanner.nextLine();
