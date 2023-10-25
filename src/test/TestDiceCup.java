@@ -1,4 +1,5 @@
 package test;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import org.junit.Test;
@@ -13,8 +14,6 @@ public class TestDiceCup {
             sum += DiceCup.rollDice();
         }
         double median = sum / 1000.0;
-        if (median < 6.8 || median > 7.2) {
-            fail();
-        }
+        assertTrue(median < 7.2 && median > 6.8);
     }
 }
