@@ -6,6 +6,7 @@ import com.sun.jna.platform.win32.WinNT.HANDLE;
 
 public class AdventureGame {
     public static void main(String[] args) {
+        // Code taken from https://stackoverflow.com/questions/52767585/how-can-you-use-vt100-escape-codes-in-java-on-windows to add colors in cmd
         if(System.getProperty("os.name").startsWith("Windows"))
         {
             // Set output mode to handle virtual terminal sequences
@@ -29,25 +30,27 @@ public class AdventureGame {
         Scanner scanner = new Scanner(System.in);
         
         Player currentPlayer = p1;
+        String playerColor = "\u001b[0m";
         int turn = 1;
         
         // The game starts
-        System.out.println("\u001b[31mHello, World!");
         System.out.println("---------------------------------------------------------------------------------");
-        System.out.println("Hello! and welcome to you, Player 1 and Player 2. Are you ready for an adventure?\n");
+        System.out.println("Hello! and welcome to you, \u001b[31mPlayer 1\u001b[0m and \u001b[34mPlayer 2\u001b[0m. Are you ready for an adventure?\n");
         System.out.println("Rules are as followed:");
-        System.out.println("You start with 1000 coins");
+        System.out.println("\u001b[32mYou start with 1000 coins");
         System.out.println("You obtain or lose coins depending on your dice throw");
         System.out.println("First player to get to 3000 or more coins wins!");
-        System.out.println("Have fun and let the game begin");
+        System.out.println("Have fun and let the game begin\u001b[0m");
         System.out.println("---------------------------------------------------------------------------------");
 
         // Game loop that runs, until a player has won
         while (!hasWon(currentPlayer)) {
             // Set currentplayer depending on turn
             currentPlayer = turn % 2 == 0 ? p2 : p1;
+            // Sets color in cmd of the current player
+            playerColor = turn % 2 == 0 ? "\u001b[34m" : "\u001b[31m";
             System.out.println("\n" + "Round: " + (turn + 1) / 2);
-            System.out.print(currentPlayer.getName() + "'s turn, press ENTER to roll the dice");
+            System.out.print(playerColor + currentPlayer.getName() + "'s\u001b[0m turn, press ENTER to roll the dice");
             scanner.nextLine();
             
             // Actions happens based on the players dicethrow
@@ -86,7 +89,7 @@ public class AdventureGame {
                     currentPlayer.changeCoins(60);
                     break;
                 case 10 : 
-                    System.out.println("You walked into a wall full of colossus titans and lost 80 coins but you used your vertical maneuvering gear to get away from it so fast, that you got an extra turn.");
+                    System.out.println("You walked into a wall full of colossus titans and lost 80 coins but you used your vertical maneuvering gear to get away from it so fast, that \u001b[32myou got an extra turn.\u001b[0m");
                     currentPlayer.changeCoins(-80);
                     turn--;
                     break;
@@ -108,7 +111,7 @@ public class AdventureGame {
         }
 
         // Game loop is stopped and winner is announced
-        System.out.println("\nCongratulations " + currentPlayer.getName() + ", you won the game!");
+        System.out.println("\n\u001b[32mCongratulations " + playerColor + currentPlayer.getName() + "\u001b[32m, you won the game!");
         scanner.nextLine();
         scanner.close();
     }
