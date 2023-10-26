@@ -7,6 +7,7 @@ import com.sun.jna.platform.win32.WinNT.HANDLE;
 public class AdventureGame {
     public static void main(String[] args) {
         // Code taken from https://stackoverflow.com/questions/52767585/how-can-you-use-vt100-escape-codes-in-java-on-windows to add colors in cmd
+        // Specific answer/revision https://stackoverflow.com/revisions/52767586/3
         if(System.getProperty("os.name").startsWith("Windows"))
         {
             // Set output mode to handle virtual terminal sequences
